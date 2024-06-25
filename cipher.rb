@@ -5,13 +5,11 @@ puts "Shift factor: "
 shift_factor = gets.chomp
 
 
-
-
-
-def shift_string(string, shift_num)
+class Cipher
+    def shift_string(string, shift_num)
     string_array = string.downcase.split("")
 
-   string_ascii = string_array.map do |letter|
+    string_ascii = string_array.map do |letter|
         if letter.ord == 32
             letter = 32
         elsif letter.ord.between?(33, 64)
@@ -24,7 +22,10 @@ def shift_string(string, shift_num)
         end
     end
     string_ascii.map { |number| number.chr}.join("")
+    end
+    
 end
 
 
-p shift_string(original_string, shift_factor)
+test = Cipher.new
+test.shift_string(original_string, shift_factor)
