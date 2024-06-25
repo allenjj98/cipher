@@ -1,8 +1,8 @@
-puts "String: "
-original_string = gets.chomp
+# puts "String: "
+# original_string = gets.chomp
 
-puts "Shift factor: "
-shift_factor = gets.chomp
+# puts "Shift factor: "
+# shift_factor = gets.chomp
 
 
 class Cipher
@@ -25,7 +25,3 @@ class Cipher
     end
     
 end
-
-
-test = Cipher.new
-test.shift_string(original_string, shift_factor)
